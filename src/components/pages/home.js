@@ -122,17 +122,12 @@ export default () => (
         <div className='row m-10-hor'>
          <div className='col-md-12 mt-12'>         
 
-         <div className='heading'>Nuestras Atracciones</div>
-         <p className='content'>
-            Curabitur mollis bibendum luctus. 
-            Duis suscipit vitae dui sed suscipit. Vestibulum auctor 
-            nunc vitae diam eleifend, in maximus metus sollicitudin. 
-            Quisque vitae sodales lectus. Nam p
-            orttitor justo sed mi finibus, 
-            vel tristique risus faucibus. 
-          </p>           
-
-          </div>
+        <div className='heading'>Nuestras Atracciones</div>
+          <p className='content'>
+            En Camping brillos de luna encontraras lugares para disfrutar de momentos inicos.
+            podras disfrutar de la naturaleza, expediciones, camping, laguna.
+          </p>
+        </div>
         </div>
     </section>
     <section className='container-fluid pt-0 black'>
@@ -158,7 +153,7 @@ export default () => (
                     <span className='br'></span>nisl non rutrum commodo, sem magna. */}
                   </p>
 
-                  <Link className='btn' to="/contact">
+                  <Link className='btn' to="/malalcura">
                     <span className="shine"></span>
                     <span>Saber Más</span>
                   </Link>
@@ -254,13 +249,7 @@ export default () => (
             <div className='row'>
               <div className='col-md-8 mx-auto'>
                 <p className='content'>
-                  Curabitur mollis bibendum luctus. 
-                  Duis suscipit vitae dui sed suscipit. Vestibulum auctor 
-                  nunc vitae diam eleifend, in maximus metus sollicitudin. 
-                  Quisque vitae sodales lectus. Nam p
-                  orttitor justo sed mi finibus, 
-                  vel tristique risus faucibus. 
-                </p>
+                  Somos fiel creyentes de que cada parte del equipo es importante.</p>
               </div>
             </div>
           </div>

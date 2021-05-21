@@ -90,13 +90,13 @@ export default function() {
                   {showmenu && 
                   <div className='menu'>
                     <div className='navbar-item'>
-                    <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>
+                    <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
                         Casa
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/works" onClick={() => btn_icon(!showmenu)}>
-                        Galeria Fotos
+                      <NavLink to="/atracciones" onClick={() => btn_icon(!showmenu)}>
+                        atracciones
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
@@ -115,7 +115,7 @@ export default function() {
                     </div>
                    
                     <div className='navbar-item'>
-                      <NavLink to="/works">Galeria Fotos</NavLink>
+                      <NavLink to="/atracciones">Atracciones</NavLink>
                     </div>
                    
                     <div className='navbar-item'>

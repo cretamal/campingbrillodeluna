@@ -5,7 +5,7 @@ import images from "./images";
 
 const ImageGallery = () => {
   const [isOpen, setOpen] = useState(false);
-  const [currentImageIndex, setCurrentIndex] = useState();
+  const [currentImageIndex = 0, setCurrentIndex] = useState();
 
   return (
     <>
@@ -13,6 +13,10 @@ const ImageGallery = () => {
       <ImageMosaic
         images={images}
         handleClick={(e, { index }) => {
+          console.log('handleClick', {
+            'e': e,
+            'index': index
+          })
           setCurrentIndex(index);
           setOpen(true);
         }}

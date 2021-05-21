@@ -9,16 +9,15 @@ export default () => (
       <div className='col-md-4'>
         <div className='footer-col'>
           <div className='heading'>
-            <h2 className='font-weight-bold '>About Us</h2>
+            <h2 className='font-weight-bold '>Camping Brillo de Luna</h2>
           </div>
           <div className='content'>
-             <p>Donec mollis quisque convallis libero in sapien pharetra tincidunt. 
-             Aliquam elit ante, Maecenas suscipit.</p>
+            <p>_______________</p>
           </div>
-          <div className='link-call' onClick={()=> window.open("mailto:support@artha.com", "_self")}>Email at. support@artha.com</div>
+          <div className='link-call' onClick={()=> window.open("mailto:contacto@campingbrillodeluna.cl", "_self")}>contacto@campingbrillodeluna.cl</div>
         </div>
       </div>
-      <div className='col-md-2'>
+      {/* <div className='col-md-2'>
         <div className='footer-col'>
           <div className='heading'>
             Usefull link
@@ -70,12 +69,12 @@ export default () => (
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
     <div className='subfooter'>
       <div className='row m-10-hor'>
         <div className='col-md-6'>
-          <div className='content'>© Copyrights 2020 <span className='font-weight-bold'>Artha</span> All rights reserved.</div>
+          <div className='content'>© Copyrights 2021 <span className='font-weight-bold'>campingbrillodeluna.cl</span> Todo los derechos reservados.</div>
         </div>
       </div>
     </div>

@@ -10,11 +10,7 @@ export default () => (
           <div className='row'>
             <div className='col-md-8 mx-auto'>
               <p className='content'>
-                Curabitur mollis bibendum luctus. 
-                Duis suscipit vitae dui sed suscipit. Vestibulum auctor 
-                nunc vitae diam eleifend, in maximus metus sollicitudin. 
-                Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, 
-                vel tristique risus faucibus. 
+                Conoce los precio y actividades que mas te acomoden.
               </p>
             </div>
           </div>
