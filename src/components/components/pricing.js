@@ -1,0 +1,88 @@
+import React from 'react';
+
+export default () => (
+  <section className='container-fluid black_more'>
+        <div className='row m-10-hor'>
+
+        <div className='col-12 text-center'>
+          {/* <div className='subheading'>Nuestros Precios</div> */}
+          <div className='heading'>Nuestros Precios</div>
+          <div className='row'>
+            <div className='col-md-8 mx-auto'>
+              <p className='content'>
+                Curabitur mollis bibendum luctus. 
+                Duis suscipit vitae dui sed suscipit. Vestibulum auctor 
+                nunc vitae diam eleifend, in maximus metus sollicitudin. 
+                Quisque vitae sodales lectus. Nam porttitor justo sed mi finibus, 
+                vel tristique risus faucibus. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className='col-md-6'>
+          <div className='pricelist'>
+            <div className="heading">Acceso Diario</div>
+            <div className="bigprice"><span className='text-gradient'>$2.000</span></div>
+            <ul className="list">
+              <li><i className="fa fa-check"></i> Por Persona</li>
+              {/* <li><i className="fa fa-check"></i> Unlimited Bandwidth</li>
+              <li><i className="fa fa-check"></i> Admin Panel</li>
+              <li><i className="fa fa-check"></i> Email Account</li>
+              <li><i className="fa fa-check"></i> 8 Weeks Free Service</li> */}
+            </ul>
+          </div>
+        </div>
+
+        <div className='col-md-6'>
+          <div className='pricelist'>
+            <div className="heading">Camping</div>
+            <div className="bigprice"><span className='text-gradient'>$4.000</span></div>
+            <ul className="list">
+              <li><i className="fa fa-check"></i> Por Persona</li>
+              <li><i className="fa fa-check"></i> 1 Noche</li>
+              <li><i className="fa fa-check"></i> Quincho</li>
+              <li><i className="fa fa-check"></i> Baños</li>
+              <li><i className="fa fa-check"></i> Atracciones</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className='col-md-6'>
+          <div className='pricelist'>
+            <div className="heading">Treking Laguna El Valiente</div>
+            <div className="bigprice"><span className='text-gradient'>$15.000</span> <small> Grupo guiado</small></div>
+            <ul className="list">
+              <li><i className="fa fa-check"></i> 8 persona maximo</li>
+              <li><i className="fa fa-check"></i> Tiempo subida 1:30hr aprox</li>              
+            </ul>
+          </div>
+        </div>     
+
+        <div className='col-md-6'>
+          <div className='pricelist'>
+            <div className="heading">Treking Cerro Alto del Padre</div>
+            <div className="bigprice"><span className='text-gradient'>$30.000</span> <small>Grupo guiado</small></div>
+            <ul className="list">
+              <li><i className="fa fa-check"></i> 8 persona maximo</li>
+              <li><i className="fa fa-check"></i> Tiempo subida 3:00hr aprox</li>              
+              <li><i className="fa fa-check"></i> Llegada a la cima del cerro</li>
+            </ul>
+          </div>
+        </div>
+        <div className='col-md-6'>
+          <div className='pricelist'>
+            <div className="heading">Treking Malalcura norte</div>
+            <div className="bigprice"><span className='text-gradient'>$35.000</span> <small>Grupo guiado</small></div>
+            <ul className="list">
+              <li><i className="fa fa-check"></i> 8 persona maximo</li>
+              <li><i className="fa fa-check"></i> Tiempo subida 4:00hr aprox</li>              
+              <li><i className="fa fa-check"></i> Llegada a la cima del cerro</li>
+            </ul>
+          </div>
+        </div>
+
+        </div>
+    </section>
+  
+);
