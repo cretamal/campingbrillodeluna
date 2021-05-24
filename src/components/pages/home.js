@@ -189,7 +189,7 @@ export default () => (
                     <span className='br'></span>nisl non rutrum commodo, sem magna. */}
                   </p>
 
-                  <Link className='btn' to="/contact">
+                  <Link className='btn' to="/elvaliente">
                     <span className="shine"></span>
                     <span>Saber Más</span>
                   </Link>
@@ -224,7 +224,7 @@ export default () => (
                     <span className='br'></span>nisl non rutrum commodo, sem magna. */}
                   </p>
 
-                  <Link className='btn' to="/contact">
+                  <Link className='btn' to="/altodelpadre">
                     <span className="shine"></span>
                     <span>Saber Más</span>
                   </Link>
@@ -259,7 +259,7 @@ export default () => (
 
     
     <Pricing />
-    <Testimony />
+    <Testimony />    
     <Footer />
 
   </div>

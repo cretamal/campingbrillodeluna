@@ -68,17 +68,14 @@ export default () => (
                   <Link to="/atracciones">Todos</Link>
                 </li>
                 <li>
-                  <Link className='active' to="/malalcura">Cerro malalcura</Link>
+                  <Link className='active' to="/malalcura">Cerro Malalcura</Link>
                 </li>
                 <li>
-                  <Link to="/service1">Interior</Link>
+                  <Link to="/elvaliente">Laguna El Valiente</Link>
                 </li>
                 <li>
-                  <Link to="/service2">Architecture</Link>
-                </li>
-                <li>
-                  <Link to="/service3">Exterior</Link>
-                </li>
+                  <Link to="/altodelpadre">Cerro Alto Del Padre</Link>                  
+                </li>                
               </ul>
               <div className='bannerservice'>
                 <div className='imgbg'>
@@ -87,7 +84,7 @@ export default () => (
                     alt="imgservice"
                   />
                 </div>
-                <div className='contb'>
+                {/* <div className='contb'>
                   <div className='headingb'>
                     Get A quote 
                   </div>
@@ -98,7 +95,7 @@ export default () => (
                     <span className="shine"></span>
                     <span>Download here</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

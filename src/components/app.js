@@ -11,6 +11,8 @@ import Team from './pages/team';
 import Price from './pages/price';
 import Atracciones from './pages/atracciones';
 import Malalcura from './pages/malalcura';
+import ElValiente from './pages/elvaliente';
+import AltoDelPadre from './pages/altodelpadre';
 import Service1 from './pages/service1';
 import Service2 from './pages/service2';
 import Service3 from './pages/service3';
@@ -54,6 +56,8 @@ export default () => (
         <Price path="/price" />
         <Atracciones path="/atracciones" />
         <Malalcura path="/malalcura" />
+        <ElValiente path="elvaliente" />
+        <AltoDelPadre path="altodelpadre" />
         <Service1 path="/service1" />
         <Service2 path="/service2" />
         <Service3 path="/service3" />
