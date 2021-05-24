@@ -6,7 +6,7 @@ import Footer from '../components/footer';
 
 export default () => (
 <div className='wraperitem'>
-  <section className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/testimony.jpg'})`}}>
+  <section className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/big-banner-cerro-alto-del-padre.jpg'})`}}>
     <div className='mainbreadcumb'>
       <div className='container-fluid'>
         <div className='row m-10-hor'>

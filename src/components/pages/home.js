@@ -137,7 +137,7 @@ export default () => (
             <div className='row'>
 
               <div className='col-md-6'>
-                <img src='./img/mocks.png' alt='imgbanner' className='w-100 border-radius'/>
+                <img src='./img/thumb-malalcura.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
               <div className='col-md-6 centered'>
                 <div>
@@ -173,7 +173,7 @@ export default () => (
             <div className='row'>
 
               <div className='col-md-6'>
-                <img src='./img/mocks.png' alt='imgbanner' className='w-100 border-radius'/>
+                <img src='./img/thumb-laguna-el-valiente.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
               <div className='col-md-6 centered'>
                 <div>
@@ -208,7 +208,7 @@ export default () => (
             <div className='row'>
 
               <div className='col-md-6'>
-                <img src='./img/mocks.png' alt='imgbanner' className='w-100 border-radius'/>
+                <img src='./img/thumb-cerro-alto-del-padre.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
               <div className='col-md-6 centered'>
                 <div>
