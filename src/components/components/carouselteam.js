@@ -73,7 +73,7 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={1}>
             <div className='bg'>
               <img
-                src="./img/team/img1.jpg"
+                src="./img/team/thumb-juan-guerrero.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
@@ -98,14 +98,14 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={2}>
             <div className='bg'>
               <img
-                src="./img/team/img2.jpg"
+                src="./img/team/thumb-carmencita-sanchez.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
             </div>
             <div className='desc'>
-              <div className='name'>Maria Vovo</div>
-              <div className='title'>Encargada ...</div>
+              <div className='name'>Carmencita Sánchez</div>
+              <div className='title'>Anfitriona</div>
             </div>
             {/* <div className='icon'>
                <span onClick={()=> window.open("//facebook.com/", "_blank")}>
@@ -123,13 +123,13 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={3}>
             <div className='bg'>
               <img
-                src="./img/team/img3.jpg"
+                src="./img/team/thumb-canela.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
             </div>
             <div className='desc'>
-              <div className='name'>Perrito</div>
+              <div className='name'>Canela</div>
               <div className='title'>Guia Excursion</div>
             </div>
             {/* <div className='icon'>
@@ -148,14 +148,14 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={3}>
             <div className='bg'>
               <img
-                src="./img/team/img3.jpg"
+                src="./img/team/thumb-land-rover.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
             </div>
             <div className='desc'>
-              <div className='name'>Land Rover 4x4 Año 77</div>
-              <div className='title'>Vehiculo</div>
+              <div className='name'>Land Rover</div>
+              <div className='title'>Vehiculo 4x4 Año 77</div>
             </div>
             {/* <div className='icon'>
                <span onClick={()=> window.open("//facebook.com/", "_blank")}>
@@ -173,14 +173,15 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={3}>
             <div className='bg'>
               <img
-                src="./img/team/img3.jpg"
+                src="./img/team/thumb-unimug.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
             </div>
             <div className='desc'>
               <div className='name'>Mercedes Unimug</div>
-              <div className='title'>Vehiculo</div>
+              <div className='title'>Vehiculo 4x4</div>
+              <div className='title'>Capacidad para 12 personas</div>
             </div>
             {/* <div className='icon'>
                <span onClick={()=> window.open("//facebook.com/", "_blank")}>

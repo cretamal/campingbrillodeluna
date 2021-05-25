@@ -195,4 +195,11 @@ export default [
     width: 2000,
     height: 2667
   }, 
+  {
+    src: "/img/gallery/26.jpg",
+    alt: "",
+    caption: "",
+    width: 2048,
+    height: 1536
+  }, 
 ];

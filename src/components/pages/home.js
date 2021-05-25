@@ -25,22 +25,22 @@ export default () => (
           <div className='col-md-4 p-0'>
             <div className='features'>
               <div className='bg'>
-                <img
+                {/* <img
                     src="./img/bg-serv-1.jpg"
                     alt="bg-features"
-                  />
+                  /> */}
               </div>
               <div className='content'>
                 <div className='heading'>
                   Camping
                 </div>
                 <div className='con-text'>
-                 Un lugar magnifico para realizar camping y vida en la naturaleza.
+                 Un lugar magnifico para realizar<br/> camping y vida en la naturaleza.
                 </div>
-                <div className='link'>
+                {/* <div className='link'>
                   <span className="shine"></span>
                   Ver más
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -48,22 +48,22 @@ export default () => (
           <div className='col-md-4 p-0'>
             <div className='features'>
               <div className='bg'>
-                <img
+                {/* <img
                     src="./img/bg-serv-2.jpg"
                     alt="bg-features"
-                  />
+                  /> */}
               </div>
               <div className='content'>
                 <div className='heading'>
                   Trekking
                 </div>
                 <div className='con-text'>
-                  Una excursion inolvidable por un bosque lleno de colores y encantos.
+                  Una excursion inolvidable por un bosque<br/> lleno de colores y encantos.
                 </div>
-                <div className='link'>
+                {/* <div className='link'>
                   <span className="shine"></span>
                   Ver más
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -71,29 +71,31 @@ export default () => (
           <div className='col-md-4 p-0'>
             <div className='features'>
               <div className='bg'>
-                <img
+                {/* <img
                     src="./img/bg-serv-3.jpg"
                     alt="bg-features"
-                  />
+                  /> */}
               </div>
               <div className='content'>
                 <div className='heading'>
                   Cabalgata
                 </div>
                 <div className='con-text'>
-                  Cabalga por lugares recondidos y conoce mas de las hermosa naturaleza que nos rodea.
+                  Cabalga por lugares recondidos y conoce mas<br/> de las hermosa naturaleza que nos rodea.
                 </div>
-                <div className='link'>
+                {/* <div className='link'>
                   <span className="shine"></span>
                   Ver más
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
 
         </div>
       </section>
-
+              <br/>
+              <br/>
+              <br/>
       <section className='container-fluid black pb-0'>
         <div className='row m-10-hor'>
 
@@ -245,7 +247,7 @@ export default () => (
         <div className='row m-10-hor'>
           <div className='col-12 text-center'>
             <div className='subheading'>Nuestro Equipo de Trabajo</div>
-            <div className='heading'>Conoce quienes somos</div>
+            <div className='heading'>Quienes somos</div>
             <div className='row'>
               <div className='col-md-8 mx-auto'>
                 <p className='content'>

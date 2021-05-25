@@ -8,7 +8,7 @@ const content = [
     description: "",
     button: "Conoce más",
     link: "/#",
-    image: "http://campingbrillodeluna.cl/img/bg-camping.jpeg"
+    image: "https://campingbrillodeluna.cl/img/bg-camping.jpeg"
   },
   // {
   //   title: "Camping Brillo de Luna",
