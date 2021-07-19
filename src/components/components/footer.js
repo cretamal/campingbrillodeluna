@@ -14,7 +14,7 @@ export default () => (
           <div className='content'>
             <p>_______________</p>
           </div>
-          <div className='link-call' onClick={()=> window.open("mailto:contacto@campingbrillodeluna.cl", "_self")}>contacto@campingbrillodeluna.cl</div>
+          <div className='link-call' onClick={()=> window.open("mailto:campingbrillodeluna@gmail.com", "_self")}>campingbrillodeluna@gmail.com</div>
         </div>
       </div>
       <div className='col-md-4'>

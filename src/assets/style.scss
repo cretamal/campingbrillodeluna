@@ -1950,4 +1950,31 @@ footer{
 .bigBanner{
   min-height:600px;
   background-position: 50% 50% !important;
+  
+}
+
+.jumbotron{
+  background: black;
+  padding:2vh 0;
+}
+
+
+.box-video{
+  width:100%;
+  max-width:1440px;
+  height:70vh;
+  min-height:500px;
+  display: block;    
+  position: relative;
+  margin: 9vh auto 30px auto;
+  border:10px solid $color;
+  border-radius: 10px;
+  
+  iframe{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }

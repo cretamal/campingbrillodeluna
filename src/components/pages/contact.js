@@ -67,8 +67,8 @@ export default function() {
                 
                 <div className='list'>
                   <i className="fa fa-envelope-o"></i>
-                  <a href='mailto:contact_info@artha.com' target='_blank' rel='noopener noreferrer'>
-                    contacto@campingbrillodeluna.cl
+                  <a href='mailto:campingbrillodeluna@gmail.com' target='_blank' rel='noopener noreferrer'>
+                    campingbrillodeluna@gmail.com
                   </a>
                 </div>
                 <div className='list'>

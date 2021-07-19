@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/vertical.css';
 
+
 const content = [
   {
     title: "Camping Brillo de Luna",
