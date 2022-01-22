@@ -7,16 +7,14 @@ import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
 import { Link } from '@reach/router';
 
-import ReactPlayer from 'react-player'
+// import ReactPlayer from 'react-player'
 
 
 export default () => (
   <div>
       <section className="jumbotron jumbomain">
-          {/* <Slider /> */}
-          <div className="box-video">
-            <ReactPlayer url='https://youtu.be/Z-SLn63QX60?showinfo=0&modestbranding=1' />
-          </div>          
+          <Slider />
+          
           <div className="icon-scroll-wraper">
             <div className="icon-scroll">
               <div className="icon-scroll-screen"></div>

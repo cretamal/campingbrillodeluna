@@ -1,52 +1,40 @@
 import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/vertical.css';
-
+import ReactPlayer from 'react-player'
 
 const content = [
   {
     title: "Camping Brillo de Luna",
-    description: "",
+    description: "Vista desde el Aire",
     button: "Conoce más",
-    link: "/#",
-    image: "https://campingbrillodeluna.cl/img/bg-camping.jpeg"
+    link: "/atracciones",
+    image: "https://campingbrillodeluna.cl/img/bg-camping.jpeg",
+    video: 'https://youtu.be/aB6g6yN6xx0'
   },
-  // {
-  //   title: "Camping Brillo de Luna",
-  //   description:
-  //     "Vuelve a lo esencial",
-  //   button: "Conoce más",
-  //   link: "/#",
-  //   image: "http://campingbrillodeluna.cl/img/bg-1.jpg"
-  // },
-  // {
-  //   title: "Un Compañero",
-  //   description:
-  //     "Todo Terreno",
-  //   button: "Conoce más",
-  //   link: "/#",
-  //   image: "http://campingbrillodeluna.cl/img/bg-2.jpg"
-  // },
-  // {
-  //   title: "Una Aventura... ",
-  //   description:
-  //     "un camino inolvidable",
-  //   button: "Conoce más",
-  //   link: "/#",
-  //   image: "http://campingbrillodeluna.cl/img/bg-3.jpg"
-  // }
+  {
+    title: "Camping Brillo de Luna",
+    description: "Vista desde el Aire",
+    button: "Conoce más",
+    link: "/atracciones",
+    image: "http://campingbrillodeluna.cl/img/bg-1.jpg",
+    video: 'https://youtu.be/9LsBDFvfFg4'
+  },
+  {
+    title: "Camping Brillo de Luna",
+    description: "Treking",
+    button: "Conoce más",
+    link: "/atracciones",
+    image: "http://campingbrillodeluna.cl/img/bg-1.jpg",
+    video: 'https://youtu.be/2nz5zmTkBtk'
+  }
 ];
 
 export default () => (
   <Slider className="slider-wrapper">
       {content.map((item, index) => (
-        <div
-          key={index}
-          className="slider-content"
-          style={{ background: `url('${item.image}') no-repeat center center` }}
-        >
-          <div className="bg-overlayer"></div>
-          <div className="inner">
+        <div key={index} className="slider-content">
+          <div div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
             <button onClick={()=> window.open(item.link, "_self")}>
@@ -56,6 +44,11 @@ export default () => (
               </span>
             </button>
           </div>
+
+          <div className="box-video">
+            <ReactPlayer url={item.video} />
+          </div>
+
         </div>
       ))}
   </Slider>
