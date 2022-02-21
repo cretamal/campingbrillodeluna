@@ -37,15 +37,14 @@ export default () => (
           <div div className="inner">
             <h1>{item.title}</h1>
             <p>{item.description}</p>
-            <button onClick={()=> window.open(item.link, "_self")}>
-              <span className="shine"></span>
+            <button onClick={()=> window.open(item.link, "_self")}>              
               <span>
                 {item.button}
               </span>
             </button>
-          </div>
+          </div>          
 
-          <div className="box-video">
+          <div className="box-media">
             <ReactPlayer url={item.video} />
           </div>
 

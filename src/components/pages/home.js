@@ -26,7 +26,7 @@ export default () => (
         <div className='row'>
 
           <div className='col-md-4 p-0'>
-            <div className='features'>
+            <div className='features feat1'>
               <div className='bg'>
                 {/* <img
                     src="./img/bg-serv-1.jpg"
@@ -49,7 +49,7 @@ export default () => (
           </div>
 
           <div className='col-md-4 p-0'>
-            <div className='features'>
+            <div className='features feat2'>
               <div className='bg'>
                 {/* <img
                     src="./img/bg-serv-2.jpg"
@@ -72,7 +72,7 @@ export default () => (
           </div>
 
           <div className='col-md-4 p-0'>
-            <div className='features'>
+            <div className='features feat3'>
               <div className='bg'>
                 {/* <img
                     src="./img/bg-serv-3.jpg"
@@ -144,7 +144,7 @@ export default () => (
               <div className='col-md-6'>
                 <img src='./img/thumb-malalcura.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
-              <div className='col-md-6 centered'>
+              <div className='col-md-6 centered box-item'>
                 <div>
                   {/* <div className="subheading mt-md-0 mt-5">
                     Cerro
@@ -180,7 +180,7 @@ export default () => (
               <div className='col-md-6'>
                 <img src='./img/thumb-laguna-el-valiente.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
-              <div className='col-md-6 centered'>
+              <div className='col-md-6 centered box-item'>
                 <div>
                   {/* <div className="subheading mt-md-0 mt-5">
                     Cerro
@@ -215,7 +215,7 @@ export default () => (
               <div className='col-md-6'>
                 <img src='./img/thumb-cerro-alto-del-padre.jpg' alt='imgbanner' className='w-100 border-radius'/>
               </div>
-              <div className='col-md-6 centered'>
+              <div className='col-md-6 centered box-item'>
                 <div>
                   {/* <div className="subheading mt-md-0 mt-5">
                     Cerro
@@ -246,7 +246,7 @@ export default () => (
     
     
 
-    <section className='container-fluid black_more'>
+    <section className='container-fluid bg-about'>
         <div className='row m-10-hor'>
           <div className='col-12 text-center'>
             <div className='subheading'>Nuestro Equipo de Trabajo</div>

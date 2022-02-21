@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default () => (
-  <section className='container-fluid black_more'>
+  <section className='container-fluid box-precios'>
         <div className='row m-10-hor'>
 
         <div className='col-12 text-center'>
@@ -16,22 +16,24 @@ export default () => (
           </div>
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-4'>
           <div className='pricelist'>
+            <div class="icon-thumb">
+              <img src='./img/trekking.png' alt='icon' />
+            </div>
             <div className="heading">Acceso Diario</div>
             <div className="bigprice"><span className='text-gradient'>$2.000</span></div>
             <ul className="list">
-              <li><i className="fa fa-check"></i> Por Persona</li>
-              {/* <li><i className="fa fa-check"></i> Unlimited Bandwidth</li>
-              <li><i className="fa fa-check"></i> Admin Panel</li>
-              <li><i className="fa fa-check"></i> Email Account</li>
-              <li><i className="fa fa-check"></i> 8 Weeks Free Service</li> */}
+              <li><i className="fa fa-check"></i> Por Persona</li>              
             </ul>
           </div>
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-4'>
           <div className='pricelist'>
+            <div class="icon-thumb">
+              <img src='./img/tienda.png' alt='icon' />
+            </div>
             <div className="heading">Camping</div>
             <div className="bigprice"><span className='text-gradient'>$4.000</span></div>
             <ul className="list">
@@ -44,8 +46,11 @@ export default () => (
           </div>
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-4'>
           <div className='pricelist'>
+            <div class="icon-thumb">
+              <img src='./img/lago.png' alt='icon' />
+            </div>
             <div className="heading">Treking Laguna El Valiente</div>
             <div className="bigprice"><span className='text-gradient'>$15.000</span> <small> Grupo guiado</small></div>
             <ul className="list">
@@ -55,8 +60,11 @@ export default () => (
           </div>
         </div>     
 
-        <div className='col-md-6'>
+        <div className='col-md-4'>
           <div className='pricelist'>
+            <div class="icon-thumb">
+              <img src='./img/montanas.png' alt='icon' />
+            </div>          
             <div className="heading">Treking Cerro Alto del Padre</div>
             <div className="bigprice"><span className='text-gradient'>$30.000</span> <small>Grupo guiado</small></div>
             <ul className="list">
@@ -66,8 +74,11 @@ export default () => (
             </ul>
           </div>
         </div>
-        <div className='col-md-6'>
+        <div className='col-md-4'>
           <div className='pricelist'>
+          <div class="icon-thumb">
+              <img src='./img/montanas2.png' alt='icon' />
+            </div>
             <div className="heading">Treking Malalcura norte</div>
             <div className="bigprice"><span className='text-gradient'>$35.000</span> <small>Grupo guiado</small></div>
             <ul className="list">
