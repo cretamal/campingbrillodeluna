@@ -45,16 +45,14 @@ export default function() {
           </div>
         </div>
       </section>
-      <section className='container-fluid black_more'>
+      <section className='container-fluid box-contact'>
         <div className='row m-10-hor'>
-          <div className='col-md-6'>
+          <div className='col-md-12'>
            <div className="text-side">
-             <h2>¿Quieres Visitarnos?</h2>
-              <p>Escribenos para darte un mejor servicio y contarte en detalles la bondades de la naturalezas que podras encontrar en Camping Brillo de Luna</p>
-              
-              <div className='address'>
+              <div className='box-como-llegar'>
                 <div className='heading'>Cómo Encontrarnos</div>
-                <div className='list'>
+
+                <div className='list'>                  
                   <i className="fa fa-map-marker"></i>
                     Carretera camino San Fabian L-31, hasta cruze sector la vega desvio cruce camino macal,  maitenal. desde aqui 2 kilómetros hasta maitenal, sector maitenal 5 km en subida hasta sector la leonera hasta el camping brillo de luna.
                 </div>
@@ -86,25 +84,7 @@ export default function() {
                 </div>
               </div>
            </div>
-          </div>
-          <div className='col-md-6'>
-            <div className="form-side">
-              <form className="formcontact" onSubmit={sendEmail}>
-                <label>Nombre</label>
-                <input type="text" name="user_name" required />
-                <label>Email</label>
-                <input type="email" name="user_email" required />
-                <label>Mensaje</label>
-                <textarea name="message" required />
-                <div id='success' className='hide'>Tu mensaje ha sido enviado...</div>
-                <div id='failed' className='hide'>Mensaje fallido ...</div>
-                <button type="submit" id='buttonsent'>
-                  <span className="shine"></span>
-                  <span>Enviar</span>
-                </button>
-              </form>
-            </div>
-          </div>
+          </div>          
         </div>
       </section>
       <Footer />

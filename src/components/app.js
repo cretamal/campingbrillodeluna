@@ -66,7 +66,7 @@ export default () => (
         </ScrollTop>
       </PosedRouter>
     <ScrollToTopBtn />
-    <div class="btn-whatsapp">
+    <div className="btn-whatsapp">
       <a href="https://wa.me/56992404001" target="_blank">
         <img src="./img/whatsapp.png" />
       </a>

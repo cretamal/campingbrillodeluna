@@ -21,18 +21,14 @@ export default () => (
             </div>
           </div>
       </section>
-
-      <section className='container-fluid p-0'>
+      
+      <section className='container-fluid box-features'>
         <div className='row'>
-
+          <div className="scene">
+            <div className="img-scene hoja-left"><img src='./img/hoja.svg' alt='hoja' /></div>
+          </div>
           <div className='col-md-4 p-0'>
-            <div className='features feat1'>
-              <div className='bg'>
-                {/* <img
-                    src="./img/bg-serv-1.jpg"
-                    alt="bg-features"
-                  /> */}
-              </div>
+            <div className='features feat1'>              
               <div className='content'>
                 <div className='heading'>
                   Camping
@@ -99,7 +95,7 @@ export default () => (
               <br/>
               <br/>
               <br/>
-      <section className='container-fluid black pb-0'>
+      <section className='container-fluid box-camping-brillodeluna'>
         <div className='row m-10-hor'>
 
           <div className='col-md-5'>
@@ -114,16 +110,13 @@ export default () => (
             </div>
             <div className='content'>
               somos un lugar de retiro, familiar, especial para disfrutar los sonido de la naturalesa y bondades que nos entrega este lugar sagrado.
-            </div>
-            <div className='content'>
-              
-            </div>
+            </div>            
           </div>
 
         </div>
     </section>
 
-    <section className='container-fluid pt-0 black'>
+    <section className='container-fluid box-atracciones'>
         <div className='row m-10-hor'>
          <div className='col-md-12 mt-12'>         
 
@@ -264,7 +257,10 @@ export default () => (
 
     
     <Pricing />
-    <Testimony />    
+    {/*
+      <Testimony />  
+    */}
+     
     <Footer />
 
   </div>

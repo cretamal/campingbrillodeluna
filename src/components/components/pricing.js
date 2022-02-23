@@ -18,7 +18,7 @@ export default () => (
 
         <div className='col-md-4'>
           <div className='pricelist'>
-            <div class="icon-thumb">
+            <div className="icon-thumb">
               <img src='./img/trekking.png' alt='icon' />
             </div>
             <div className="heading">Acceso Diario</div>
@@ -31,7 +31,7 @@ export default () => (
 
         <div className='col-md-4'>
           <div className='pricelist'>
-            <div class="icon-thumb">
+            <div className="icon-thumb">
               <img src='./img/tienda.png' alt='icon' />
             </div>
             <div className="heading">Camping</div>
@@ -48,7 +48,7 @@ export default () => (
 
         <div className='col-md-4'>
           <div className='pricelist'>
-            <div class="icon-thumb">
+            <div className="icon-thumb">
               <img src='./img/lago.png' alt='icon' />
             </div>
             <div className="heading">Treking Laguna El Valiente</div>
@@ -62,7 +62,7 @@ export default () => (
 
         <div className='col-md-4'>
           <div className='pricelist'>
-            <div class="icon-thumb">
+            <div className="icon-thumb">
               <img src='./img/montanas.png' alt='icon' />
             </div>          
             <div className="heading">Treking Cerro Alto del Padre</div>
@@ -76,7 +76,7 @@ export default () => (
         </div>
         <div className='col-md-4'>
           <div className='pricelist'>
-          <div class="icon-thumb">
+          <div className="icon-thumb">
               <img src='./img/montanas2.png' alt='icon' />
             </div>
             <div className="heading">Treking Malalcura norte</div>
