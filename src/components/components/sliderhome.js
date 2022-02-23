@@ -1,54 +1,59 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/vertical.css';
 import ReactPlayer from 'react-player'
+import axios from "axios";
 
-const content = [
-  {
-    title: "Camping Brillo de Luna",
-    description: "Vista desde el Aire",
-    button: "Conoce más",
-    link: "/atracciones",
-    image: "https://campingbrillodeluna.cl/img/bg-camping.jpeg",
-    video: 'https://youtu.be/aB6g6yN6xx0'
-  },
-  {
-    title: "Camping Brillo de Luna",
-    description: "Vista desde el Aire",
-    button: "Conoce más",
-    link: "/atracciones",
-    image: "http://campingbrillodeluna.cl/img/bg-1.jpg",
-    video: 'https://youtu.be/9LsBDFvfFg4'
-  },
-  {
-    title: "Camping Brillo de Luna",
-    description: "Treking",
-    button: "Conoce más",
-    link: "/atracciones",
-    image: "http://campingbrillodeluna.cl/img/bg-1.jpg",
-    video: 'https://youtu.be/2nz5zmTkBtk'
-  }
-];
 
-export default () => (
-  <Slider className="slider-wrapper">
-      {content.map((item, index) => (
-        <div key={index} className="slider-content">
-          <div div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <button onClick={()=> window.open(item.link, "_self")}>              
-              <span>
-                {item.button}
-              </span>
-            </button>
-          </div>          
 
-          <div className="box-media">
-            <ReactPlayer url={item.video} />
+export default () => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]) 
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      setLoading(true);
+      try {
+        const {data: response} = await axios.get('http://localhost:3003/big-banner-homes');        
+        setData(response);
+      } catch (error) {
+        console.error(error.message);
+      }
+      setLoading(false);
+    }
+    fetchData();   
+  }, []);
+
+  return(
+    <div>   
+      {loading && <div>Loading</div>}
+      {!loading && (
+        <Slider className="slider-wrapper">      
+        {data.map((item, index) => (
+          <div key={index} className="slider-content">
+            <div div className="inner">
+              <h1>{item.title}</h1>
+              <p>{item.description}</p>
+              <button onClick={()=> window.open(item.callToAction[0].url, "_self")}>              
+                <span>
+                  {item.callToAction[0].label}
+                </span>
+              </button>
+            </div>          
+          
+            <div className="box-media">
+              {(item.activeVideo === true) ? (
+                <ReactPlayer url={item.urlVideo} />
+              ) : (                
+                <img src={'http://localhost:3003'+item.image.url} alt="Imageteam" />
+              )}
+              
+            </div>
+
           </div>
-
-        </div>
-      ))}
-  </Slider>
-);
+        ))}
+        </Slider>
+      )}
+    </div>
+  )  
+};
