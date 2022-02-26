@@ -21,8 +21,8 @@ export default () => (
             <div className="icon-thumb">
               <img src='./img/trekking.png' alt='icon' />
             </div>
-            <div className="heading">Acceso Diario</div>
-            <div className="bigprice"><span className='text-gradient'>$2.000</span></div>
+            <div className="heading">Acceso Diario al Camping</div>
+            <div className="bigprice"><span className='text-gradient'>$2.500</span></div>
             <ul className="list">
               <li><i className="fa fa-check"></i> Por Persona</li>              
             </ul>
@@ -35,7 +35,7 @@ export default () => (
               <img src='./img/tienda.png' alt='icon' />
             </div>
             <div className="heading">Camping</div>
-            <div className="bigprice"><span className='text-gradient'>$4.000</span></div>
+            <div className="bigprice"><span className='text-gradient'>$5.000</span></div>
             <ul className="list">
               <li><i className="fa fa-check"></i> Por Persona</li>
               <li><i className="fa fa-check"></i> 1 Noche</li>
@@ -52,7 +52,7 @@ export default () => (
               <img src='./img/lago.png' alt='icon' />
             </div>
             <div className="heading">Treking Laguna El Valiente</div>
-            <div className="bigprice"><span className='text-gradient'>$15.000</span> <small> Grupo guiado</small></div>
+            <div className="bigprice"><span className='text-gradient'>$25.000</span> <small> Grupo guiado</small></div>
             <ul className="list">
               <li><i className="fa fa-check"></i> 8 persona maximo</li>
               <li><i className="fa fa-check"></i> Tiempo subida 1:30hr aprox</li>              

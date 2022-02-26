@@ -58,10 +58,7 @@ export default () => (
                 </li>
                 <li>
                     <Link to="/malalcura">Cerro Malalcura</Link>
-                </li>
-                <li>
-                    <Link to="/altodelpadre">Cerro Alto Del Padre</Link>                  
-                </li>
+                </li>                
                 
               </ul>
               <div className='bannerservice'>

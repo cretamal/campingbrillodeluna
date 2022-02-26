@@ -72,9 +72,6 @@ export default () => (
                 </li>
                 <li>
                   <Link to="/elvaliente">Laguna El Valiente</Link>
-                </li>
-                <li>
-                  <Link to="/altodelpadre">Cerro Alto Del Padre</Link>                  
                 </li>                
               </ul>
               <div className='bannerservice'>

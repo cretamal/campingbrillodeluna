@@ -72,12 +72,12 @@ export default function() {
     return (
     <header id="myHeader" className='navbar'>
      <div className='container-fluid'>
-       <div className='row m-2-hor w-100-nav'>
+       <div className='row'>
           <div className='logo'>
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
                 <img
-                    src="./img/logo.png"
+                    src="./img/logo-brillodeLuna.svg"
                     className="img-fluid"
                     alt="#"
                   />

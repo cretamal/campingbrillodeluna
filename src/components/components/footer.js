@@ -1,28 +1,40 @@
-import React from 'react';
-import emailjs from 'emailjs-com';
+import React, { useEffect} from 'react';
+// import emailjs from 'emailjs-com';
+import { Formik } from 'formik';
+import axios from "axios";
+import { send } from 'emailjs-com';
 
-const sendEmail = (e) => {  
-  const success = document.getElementById("success");
-  const button = document.getElementById("buttonsent");
-  const failed = document.getElementById("failed");
-  e.preventDefault();
 
-  alert('sendEmail');
 
-  // emailjs.sendForm('gmail', 'template_csfdEZiA', e.target, 'user_zu7p2b3lDibMCDutH5hif')
-  //   .then((result) => {
-  //       console.log(result.text);
-  //       success.classList.add('show');
-  //       button.classList.add('show');
-  //       failed.classList.remove('show');
-  //   }, (error) => {
-  //       console.log(error.text);
-  //       failed.classList.add('show');
-  //   });
-}
 
-export default () => (
-  <footer className='container-fluid box-footer'>
+export default () => {
+
+  const sendMailContact = (e) => {
+    const success = document.getElementById("success");
+    const button = document.getElementById("buttonsent");
+    const failed = document.getElementById("failed");
+    e.preventDefault();    
+  }
+
+  const send = (_dataForm) => {
+    const dataForm = _dataForm;
+
+    axios.post('https://public.devfun.cl/sendMailCampingBrillodeLuna', dataForm)
+    .then( (response) => {
+      console.log('send mail', response);
+    })
+    .catch( (error) => {
+      console.log('send mail', error);
+    });
+  }
+
+  useEffect(() => {
+    
+    
+  },[]);
+
+  return (
+    <footer className='container-fluid box-footer'>
     <div className="bg-footer"></div>
     <div className="scene">
       <div className="img-scene carpa-footer"><img src='./img/carpa.svg' alt='hoja' /></div>
@@ -37,28 +49,55 @@ export default () => (
             <p>Contactanos</p>
           </div>
           <div className="short-form">
-            <form className="formcontact" onSubmit={sendEmail}>
-              <label>Nombre</label>
-              <input type="text" name="user_name" required />
-              <label>Email</label>
-              <input type="email" name="user_email" required />
-              <label>Mensaje</label>
-              <textarea name="message" required />
-              <div id='success' className='hide'>Tu mensaje ha sido enviado...</div>
-              <div id='failed' className='hide'>Mensaje fallido ...</div>
-              <button type="submit" id='buttonsent'>
-                <span className="shine"></span>
-                <span>Enviar</span>
-              </button>
-            </form>
+            <Formik
+            initialValues={{ name:'', email: '', message: '' }}
+            validate={values => {
+              const errors = {};
+              if (!values.email) {
+                errors.email = 'Required';
+              } else if (
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+              ) {
+                errors.email = 'Invalid email address';
+              }
+              return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+              setTimeout(() => {
+                // sendMailContact();
+                send(values);
+
+                setSubmitting(false);
+              }, 400);
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              isSubmitting,
+              /* and other goodies */
+            }) => (
+              <form className="formcontact" onSubmit={handleSubmit}>
+                <label>Nombre</label>
+                <input type="text" name="name" onChange={handleChange} onBlur={handleBlur} value={values.name} required />
+                <label>Email</label>
+                <input type="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} required/>
+                <label>Mensaje</label>
+                <textarea type="text" name="message" onChange={handleChange} onBlur={handleBlur} value={values.message} required/>
+                
+
+                <button type="submit" disabled={isSubmitting}>
+                  Submit
+                </button>
+              </form>
+            )}
+            </Formik>       
           </div>
-          
-
-          <br/>
-          <br/>
-          <br/>
-
-          <div className='link-call' onClick={()=> window.open("mailto:campingbrillodeluna@gmail.com", "_self")}>campingbrillodeluna@gmail.com</div>
+          <div className='link-email' onClick={()=> window.open("mailto:campingbrillodeluna@gmail.com", "_self")}>campingbrillodeluna@gmail.com</div>
         </div>
       </div>
       <div className='col-md-4'>
@@ -133,4 +172,8 @@ export default () => (
     </div>
     
   </footer>
-);
+  )
+
+
+
+};

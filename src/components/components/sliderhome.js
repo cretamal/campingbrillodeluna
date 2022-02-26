@@ -14,7 +14,7 @@ export default () => {
     const fetchData = async () =>{
       setLoading(true);
       try {
-        const {data: response} = await axios.get('http://localhost:3003/big-banner-homes');        
+        const {data: response} = await axios.get('https://backend.campingbrillodeluna.cl/big-banner-homes');        
         setData(response);
       } catch (error) {
         console.error(error.message);
@@ -45,7 +45,7 @@ export default () => {
               {(item.activeVideo === true) ? (
                 <ReactPlayer url={item.urlVideo} />
               ) : (                
-                <img src={'http://localhost:3003'+item.image.url} alt="Imageteam" />
+                <img src={'https://backend.campingbrillodeluna.cl'+item.image.url} alt="Imageteam" />
               )}
               
             </div>

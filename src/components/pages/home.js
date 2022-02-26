@@ -199,7 +199,11 @@ export default () => (
         </div>
       </div>
     </section>
-    <section className='container-fluid pt-0 black'>
+
+    {
+      /*
+    
+      <section className='container-fluid pt-0 black'>
       <div className='row m-10-hor'>
         <div className='col-md-12 mt-12'>          
           <section className='container-fluid p-md-0'>
@@ -210,16 +214,15 @@ export default () => (
               </div>
               <div className='col-md-6 centered box-item'>
                 <div>
-                  {/* <div className="subheading mt-md-0 mt-5">
+                  <div className="subheading mt-md-0 mt-5">
                     Cerro
-                  </div> */}
+                  </div>
                   <div className="heading">
                     Cerro Alto del Padre
                   </div>
                   <p>
                     El cerro Alto del Padre con sus 3349 m de altura forma parte de las cumbres más sencillas de subir en el sector del volcán  Tinguiririca y se caracteriza por su maravillosa vista
-                    {/* <span className='br'></span>Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, 
-                    <span className='br'></span>nisl non rutrum commodo, sem magna. */}
+                    
                   </p>
 
                   <Link className='btn' to="/altodelpadre">
@@ -234,6 +237,9 @@ export default () => (
         </div>
       </div>
     </section>
+
+      */}
+    
 
 
     
