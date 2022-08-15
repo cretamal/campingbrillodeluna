@@ -14,8 +14,9 @@ export default () => {
     const fetchData = async () =>{
       setLoading(true);
       try {
-        const {data: response} = await axios.get('https://backend.campingbrillodeluna.cl/big-banner-homes');        
-        setData(response);
+        const {data: response} = await axios.get('https://backend.campingbrillodeluna.cl/big-banner-home');        
+        setData(response.Banner);
+        console.log('response', response);
       } catch (error) {
         console.error(error.message);
       }
@@ -34,20 +35,20 @@ export default () => {
             <div div className="inner">
               <h1>{item.title}</h1>
               <p>{item.description}</p>
-              <button onClick={()=> window.open(item.callToAction[0].url, "_self")}>              
-                <span>
-                  {item.callToAction[0].label}
-                </span>
-              </button>
-            </div>          
-          
+              { item.CallToAction != null ? 
+                <button onClick={()=> window.open(item.CallToAction.url, "_self")}>              
+                  <span>
+                    {item.CallToAction.label}
+                  </span>
+                </button> : null
+              }
+            </div> 
             <div className="box-media">
               {(item.activeVideo === true) ? (
                 <ReactPlayer url={item.urlVideo} />
               ) : (                
                 <img src={'https://backend.campingbrillodeluna.cl'+item.image.url} alt="Imageteam" />
               )}
-              
             </div>
 
           </div>

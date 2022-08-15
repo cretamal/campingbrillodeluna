@@ -1,273 +1,200 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Slider from '../components/sliderhome';
 import Carouselteam from '../components/carouselteam';
-import Bannercontact from '../components/bannercontact';
 import Pricing from '../components/pricing';
-import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
 import { Link } from '@reach/router';
+import axios from "axios";
 
-// import ReactPlayer from 'react-player'
+
+export default () => {
+  const [shortCut, setData] = useState([]);
+  const [somosHome, setDataSomosHome] = useState([]);
+  const [shortCutAtractions, setDataAtraction] = useState([]);
+  const [shortCutAtractionsArray, setDataAtractionArray] = useState([]); 
+  const [somos, setDataSomos] = useState([]); 
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/short-cut-home`
+        );
+        setData(data.ShortCut);        
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();   
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/short-cut-atraccion`
+        );
+        console.log('short-cut-atraccion:', data.Atraccione);        
+        setDataAtraction(data);
+        setDataAtractionArray(data.Atraccione);
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();   
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/somos-home`
+        );
+        console.log('somos Home:', data);        
+        setDataSomosHome(data);        
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();   
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/somos`
+        );             
+        console.log('somos***', data);
+        setDataSomos(data);        
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();   
+  }, []);
+
+  
 
 
-export default () => (
-  <div>
-      <section className="jumbotron jumbomain">
-          <Slider />
-          
-          <div className="icon-scroll-wraper">
-            <div className="icon-scroll">
-              <div className="icon-scroll-screen"></div>
-            </div>
-          </div>
-      </section>
-      
-      <section className='container-fluid box-features'>
-        <div className='row'>
-          <div className="scene">
-            <div className="img-scene hoja-left"><img src='./img/hoja.svg' alt='hoja' /></div>
-          </div>
-          <div className='col-md-4 p-0'>
-            <div className='features feat1'>              
-              <div className='content'>
-                <div className='heading'>
-                  Camping
+    return(
+      <div>          
+          <section className="jumbotron jumbomain">
+              {/* Slider Big banner Home*/}
+              <Slider />          
+              <div className="icon-scroll-wraper">
+                <div className="icon-scroll">
+                  <div className="icon-scroll-screen"></div>
                 </div>
-                <div className='con-text'>
-                 Un lugar magnifico para realizar<br/> camping y vida en la naturaleza.
-                </div>
-                {/* <div className='link'>
-                  <span className="shine"></span>
-                  Ver más
-                </div> */}
               </div>
-            </div>
-          </div>
-
-          <div className='col-md-4 p-0'>
-            <div className='features feat2'>
-              <div className='bg'>
-                {/* <img
-                    src="./img/bg-serv-2.jpg"
-                    alt="bg-features"
-                  /> */}
-              </div>
-              <div className='content'>
-                <div className='heading'>
-                  Trekking
-                </div>
-                <div className='con-text'>
-                  Una excursion inolvidable por un bosque<br/> lleno de colores y encantos.
-                </div>
-                {/* <div className='link'>
-                  <span className="shine"></span>
-                  Ver más
-                </div> */}
-              </div>
-            </div>
-          </div>
-
-          <div className='col-md-4 p-0'>
-            <div className='features feat3'>
-              <div className='bg'>
-                {/* <img
-                    src="./img/bg-serv-3.jpg"
-                    alt="bg-features"
-                  /> */}
-              </div>
-              <div className='content'>
-                <div className='heading'>
-                  Cabalgata
-                </div>
-                <div className='con-text'>
-                  Cabalga por lugares recondidos y conoce mas<br/> de las hermosa naturaleza que nos rodea.
-                </div>
-                {/* <div className='link'>
-                  <span className="shine"></span>
-                  Ver más
-                </div> */}
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-              <br/>
-              <br/>
-              <br/>
-      <section className='container-fluid box-camping-brillodeluna'>
-        <div className='row m-10-hor'>
-
-          <div className='col-md-5'>
-            <div className='heading'>
-              CAMPING<span className='br'></span>BRILLO DE<span className='br'></span>LUNA
-            </div>
-          </div>
-
-          <div className='col-md-7'>
-            <div className='content'>
-              preservamos la naturaleza como lugar sagrado respetando nuestro ecosistema.
-            </div>
-            <div className='content'>
-              somos un lugar de retiro, familiar, especial para disfrutar los sonido de la naturalesa y bondades que nos entrega este lugar sagrado.
-            </div>            
-          </div>
-
-        </div>
-    </section>
-
-    <section className='container-fluid box-atracciones'>
-        <div className='row m-10-hor'>
-         <div className='col-md-12 mt-12'>         
-
-        <div className='heading'>Nuestras Atracciones</div>
-          <p className='content'>
-            En Camping brillos de luna encontraras lugares para disfrutar de momentos inicos.
-            podras disfrutar de la naturaleza, expediciones, camping, laguna.
-          </p>
-        </div>
-        </div>
-    </section>
-    <section className='container-fluid pt-0 black'>
-      <div className='row m-10-hor'>
-        <div className='col-md-12 mt-12'>          
-          <section className='container-fluid p-md-0'>
+          </section>
+          <section className='container-fluid box-features'>
             <div className='row'>
-
-              <div className='col-md-6'>
-                <img src='./img/thumb-malalcura.jpg' alt='imgbanner' className='w-100 border-radius'/>
+              <div className="scene">
+                <div className="img-scene hoja-left"><img src='./img/hoja.svg' alt='hoja' /></div>
               </div>
-              <div className='col-md-6 centered box-item'>
-                <div>
-                  {/* <div className="subheading mt-md-0 mt-5">
-                    Cerro
-                  </div> */}
-                  <div className="heading">
-                    Cerro Malalcura
+              {shortCut.map((item, index) => ( 
+                <div className='col-md-4 p-0'>
+                  <div className='features feat1'>              
+                    <div className='content'>
+                      <div className='heading'>
+                          {item.title}
+                      </div>
+                      <div className='con-text'>
+                      {item.description}
+                      </div>                      
+                    </div>
                   </div>
-                  <p>
-                    Ruta de trekking para escalar el Cerro Malalcura por su cara sur, con vistas al Valle y laguna el Valiente. El cerro Malalcura es conocido en la zona por sus excelentes paredes para realizar escalada tradicional.
-                    {/* <span className='br'></span>Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, 
-                    <span className='br'></span>nisl non rutrum commodo, sem magna. */}
-                  </p>
-
-                  <Link className='btn' to="/malalcura">
-                    <span className="shine"></span>
-                    <span>Saber Más</span>
-                  </Link>
-
                 </div>
-              </div>
-              
+              ))};
             </div>
           </section>
-        </div>
-      </div>      
-    </section>
-    <section className='container-fluid pt-0 black'>
-      <div className='row m-10-hor'>
-        <div className='col-md-12 mt-12'>          
-          <section className='container-fluid p-md-0'>
-            <div className='row'>
+          <br/>
+          <br/>
+          <br/>
+          <section className='container-fluid box-camping-brillodeluna'>
+            <div className='row m-10-hor'>
 
-              <div className='col-md-6'>
-                <img src='./img/thumb-laguna-el-valiente.jpg' alt='imgbanner' className='w-100 border-radius'/>
-              </div>
-              <div className='col-md-6 centered box-item'>
-                <div>
-                  {/* <div className="subheading mt-md-0 mt-5">
-                    Cerro
-                  </div> */}
-                  <div className="heading">
-                    Laguna El Valiente
-                  </div>
-                  <p>
-                    Ruta de trekking a la laguna El Valiente, en su valle homónimo en San Fabian de Alico. Para poder realizar este sendero se puede hacer por el día o acampando en el camping Camping Brillo de Luna.
-                    {/* <span className='br'></span>Fusce vitae egestas mi, vel dapibus diam. Mauris malesuada, 
-                    <span className='br'></span>nisl non rutrum commodo, sem magna. */}
-                  </p>
-
-                  <Link className='btn' to="/elvaliente">
-                    <span className="shine"></span>
-                    <span>Saber Más</span>
-                  </Link>
+              <div className='col-md-5'>
+                <div className='heading'>
+                  {somosHome.title}
+                  {/*CAMPING<span className='br'></span>BRILLO DE<span className='br'></span>LUNA*/}
                 </div>
               </div>
-              
+              <div className='col-md-7'>
+                <div className='content'>
+                  {somosHome.description}
+                </div>                
+              </div>
             </div>
           </section>
-        </div>
+
+
+        <section className='container-fluid box-atracciones'>
+            <div className='row m-10-hor'>
+            <div className='col-md-12 mt-12'>         
+
+            <div className='heading'>{shortCutAtractions.title}</div>
+              <p className='content'>
+                {shortCutAtractions.description}
+              </p>
+            </div>
+            </div>
+        </section>
+        {
+          shortCutAtractionsArray.map((item, index) => (
+            <section className='container-fluid pt-0 black'>
+              <div className='row m-10-hor'>
+                <div className='col-md-12 mt-12'>          
+                  <section className='container-fluid p-md-0'>
+                    <div className='row'>
+                      <div className='col-md-6'>
+                        <img src={'https://backend.campingbrillodeluna.cl'+item.image.url} alt='imgbanner' className='w-100 border-radius'/>
+                      </div>
+                      <div className='col-md-6 centered box-item'>
+                        <div>                      
+                          <div className="heading">
+                            {item.title}
+                          </div>
+                          <p>
+                          {item.description}
+                          </p>
+                          <Link className='btn' to={item.linkButton}>
+                            <span className="shine"></span>
+                            <span>Saber Más</span>
+                          </Link>
+                        </div>
+                      </div>                      
+                    </div>
+                  </section>
+                </div>
+              </div>      
+            </section>           
+          ))
+        };
+
+        <section className='container-fluid bg-about'>
+            <div className='row m-10-hor'>
+              <div className='col-12 text-center'>
+                <div className='subheading'>{somos.title}</div>
+                <div className='heading'>{somos.subTitle}</div>
+                <div className='row'>
+                  <div className='col-md-8 mx-auto'>
+                    <p className='content'>
+                      {somos.description}  
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Carouselteam />
+            </div>
+        </section>
+        
+        <Pricing />
+        
+        
+        <Footer />
+
       </div>
-    </section>
-
-    {
-      /*
-    
-      <section className='container-fluid pt-0 black'>
-      <div className='row m-10-hor'>
-        <div className='col-md-12 mt-12'>          
-          <section className='container-fluid p-md-0'>
-            <div className='row'>
-
-              <div className='col-md-6'>
-                <img src='./img/thumb-cerro-alto-del-padre.jpg' alt='imgbanner' className='w-100 border-radius'/>
-              </div>
-              <div className='col-md-6 centered box-item'>
-                <div>
-                  <div className="subheading mt-md-0 mt-5">
-                    Cerro
-                  </div>
-                  <div className="heading">
-                    Cerro Alto del Padre
-                  </div>
-                  <p>
-                    El cerro Alto del Padre con sus 3349 m de altura forma parte de las cumbres más sencillas de subir en el sector del volcán  Tinguiririca y se caracteriza por su maravillosa vista
-                    
-                  </p>
-
-                  <Link className='btn' to="/altodelpadre">
-                    <span className="shine"></span>
-                    <span>Saber Más</span>
-                  </Link>
-                </div>
-              </div>
-              
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-
-      */}
-    
-
-
-    
-    
-
-    <section className='container-fluid bg-about'>
-        <div className='row m-10-hor'>
-          <div className='col-12 text-center'>
-            <div className='subheading'>Nuestro Equipo de Trabajo</div>
-            <div className='heading'>Quienes somos</div>
-            <div className='row'>
-              <div className='col-md-8 mx-auto'>
-                <p className='content'>
-                  Somos fiel creyentes de que cada parte del equipo es importante.</p>
-              </div>
-            </div>
-          </div>
-          <Carouselteam />
-        </div>
-    </section>
-
-    
-    <Pricing />
-    {/*
-      <Testimony />  
-    */}
-     
-    <Footer />
-
-  </div>
-);
+    )
+  };

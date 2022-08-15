@@ -40,7 +40,7 @@ export default () => {
       <div className="img-scene carpa-footer"><img src='./img/carpa.svg' alt='hoja' /></div>
     </div>
     <div className='row m-10-hor'>
-      <div className='col-md-4'>
+      <div className='col-md-5'>
         <div className='footer-col'>
           <div className='heading'>
             Camping Brillo de Luna
@@ -100,7 +100,7 @@ export default () => {
           <div className='link-email' onClick={()=> window.open("mailto:campingbrillodeluna@gmail.com", "_self")}>campingbrillodeluna@gmail.com</div>
         </div>
       </div>
-      <div className='col-md-4'>
+      <div className='col-md-7'>
         <div className='box-maps'>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3207.0000422430617!2d-71.53246648471836!3d-36.50586108001034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDMwJzIxLjEiUyA3McKwMzEnNDkuMCJX!5e0!3m2!1ses!2scl!4v1621911725385!5m2!1ses!2scl" width="600" height="450" loading="lazy"></iframe>
         </div>

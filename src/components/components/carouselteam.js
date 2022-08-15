@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Slider from "react-slick";
+import axios from "axios";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -13,7 +14,31 @@ class CustomSlide extends Component {
 }
 
 export default class Responsive extends Component {
+  constructor() {
+    super();
+    this.state = {
+      teamWork: []
+    };
+  }
+  componentWillMount = () => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/somos`
+        );             
+        console.log('Team Work***', data);
+        this.setState({ teamWork: data });        
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();
+  }
+
   render() {
+    const { teamWork } = this.state;
+    const teamWorkSlider  = teamWork.TeamWortk;
+    console.log('teamWorkSlider**', teamWorkSlider);
     var settings = {
       dots: true,
       infinite: false,
@@ -69,135 +94,26 @@ export default class Responsive extends Component {
     return (
       <div className='slickteam'>
         <Slider {...settings}>
-
-          <CustomSlide className='itm' index={1}>
-            <div className='bg'>
-              <img
-                src="./img/team/thumb-juan-guerrero.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Juan Guerrero</div>
-              <div className='title'>Administrador / Excursionista</div>
-            </div>
-            {/* <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div> */}
-          </CustomSlide>
-
-          <CustomSlide className='itm' index={2}>
-            <div className='bg'>
-              <img
-                src="./img/team/thumb-carmencita-sanchez.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Carmencita Sánchez</div>
-              <div className='title'>Anfitriona</div>
-            </div>
-            {/* <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div> */}
-          </CustomSlide>
-
-          <CustomSlide className='itm' index={3}>
-            <div className='bg'>
-              <img
-                src="./img/team/thumb-canela.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Canela</div>
-              <div className='title'>Guia Excursion</div>
-            </div>
-            {/* <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div> */}
-          </CustomSlide>
-
-          <CustomSlide className='itm' index={3}>
-            <div className='bg'>
-              <img
-                src="./img/team/thumb-land-rover.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Land Rover</div>
-              <div className='title'>Vehiculo 4x4 Año 77</div>
-            </div>
-            {/* <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div> */}
-          </CustomSlide>
-
-          <CustomSlide className='itm' index={3}>
-            <div className='bg'>
-              <img
-                src="./img/team/thumb-unimug.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Mercedes Unimug</div>
-              <div className='title'>Vehiculo 4x4</div>
-              <div className='title'>Capacidad para 12 personas</div>
-            </div>
-            {/* <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div> */}
-          </CustomSlide>
-
+          { teamWorkSlider != undefined ?
+            teamWorkSlider.map((item, index) => (
+              <CustomSlide className='itm' index={index}>
+                <div className='bg'>
+                  <img
+                    src={'https://backend.campingbrillodeluna.cl'+item.image.url}
+                    className="img-fluid"
+                    alt="Imageteam"
+                  />
+                </div>
+                <div className='desc'>
+                  <div className='name'>{item.name}</div>
+                  <div className='title'>{item.role}</div>
+                </div>            
+              </CustomSlide>
+            ))
+            : null
+          }
           
-
+          
         </Slider>
       </div>
     );

@@ -159,8 +159,8 @@ section{
 .m-10-hor{
   display: flex;
   justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -1150,7 +1150,7 @@ footer{
     margin: 15px 0;
     .heading{
       font-weight: 500;
-      font-size: 1.1rem;
+      font-size: 30px !important;
       margin-bottom: 10px;
     }
     .content{
@@ -1201,7 +1201,7 @@ footer{
       font-weight: 900;
       display: inline-block;
       color: #fff;
-      font-size: 1.4rem;
+      font-size: 16px;
       width: max-content;
       letter-spacing: 1px;
       padding: 0 0 5px;
@@ -2452,9 +2452,8 @@ footer{
   }
   .box-maps{
     width:100%;
-    margin-top: 100px;
     iframe{
-      
+      width: 100%;
       border:15px solid rgba(255, 255, 255, 0.15);
       border-radius:10px;
       @media only screen and (max-width: 1024px) {
