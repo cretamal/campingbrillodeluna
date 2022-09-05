@@ -604,7 +604,7 @@ section{
       justify-content: right;
       font-size: .86rem;
       font-weight: 400;
-      letter-spacing: 4px;
+      letter-spacing: 4px;      
       .dash{
         padding: 0 10px;
       }
@@ -1529,6 +1529,9 @@ footer{
       padding: 0;
       margin: 0;
       list-style: none;
+      h3{
+        color: #333;
+      }
       li{
         position: relative;
         a{
@@ -2363,6 +2366,13 @@ footer{
       border: 8px solid $color;
       transition: all 0.3s ease;
     }
+  }
+}
+
+.list{
+  .title{
+    color:#ce3f02 !important;
+    font-weight: 900;
   }
 }
 

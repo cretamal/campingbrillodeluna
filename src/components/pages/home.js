@@ -159,7 +159,7 @@ export default () => {
                           <p>
                           {item.description}
                           </p>
-                          <Link className='btn' to={item.linkButton}>
+                          <Link className='btn' to={'atraccion/'+item.linkButton} state={{name:'zayne'}}>
                             <span className="shine"></span>
                             <span>Saber Más</span>
                           </Link>

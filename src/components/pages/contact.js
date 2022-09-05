@@ -1,29 +1,46 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import emailjs from 'emailjs-com';
 import { Link } from '@reach/router';
 import Footer from '../components/footer';
+import axios from "axios";
 
 
-export default function() {
+export default () => {
 
-  function sendEmail(e) {
+  // function sendEmail(e) {
+  //   const success = document.getElementById("success");
+  //   const button = document.getElementById("buttonsent");
+  //   const failed = document.getElementById("failed");
+  //   e.preventDefault();
 
-    const success = document.getElementById("success");
-    const button = document.getElementById("buttonsent");
-    const failed = document.getElementById("failed");
-    e.preventDefault();
+  //   emailjs.sendForm('gmail', 'template_csfdEZiA', e.target, 'user_zu7p2b3lDibMCDutH5hif')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //         success.classList.add('show');
+  //         button.classList.add('show');
+  //         failed.classList.remove('show');
+  //     }, (error) => {
+  //         console.log(error.text);
+  //         failed.classList.add('show');
+  //     });
+  // }
 
-    emailjs.sendForm('gmail', 'template_csfdEZiA', e.target, 'user_zu7p2b3lDibMCDutH5hif')
-      .then((result) => {
-          console.log(result.text);
-          success.classList.add('show');
-          button.classList.add('show');
-          failed.classList.remove('show');
-      }, (error) => {
-          console.log(error.text);
-          failed.classList.add('show');
-      });
-  }
+  const [contactData, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () =>{
+      try {
+        const { data } = await axios.get(
+          `https://backend.campingbrillodeluna.cl/contact-page`
+        );
+        console.log('contacData', data);
+        setData(data.Indication);    
+      } catch (error) {
+        console.error(error.message);
+      }
+    }
+    fetchData();   
+  }, []);
 
   return (
     <div>
@@ -51,37 +68,29 @@ export default function() {
            <div className="text-side">
               <div className='box-como-llegar'>
                 <div className='heading'>Cómo Encontrarnos</div>
+                {
+                  contactData.map((item, index) => (                    
+                    <div className='list'>                                        
+                      <p className='title'>{item.title}</p>
+                      <i className="fa fa-angle-double-right"></i>                     
+                        
+                      {
+                        {
+                          "Indicación" : <p>{item.description}</p>,
+                          "Mapa" : <a href={item.linkExterno} target="_blank">{item.description}</a>,
+                          "Correo" : <a href={`mailto:${item.linkExterno}`}>{item.linkExterno}</a>,
+                          "Telefono" : <a href={`tel:${item.linkExterno}`}>{item.linkExterno}</a>,
+                          "Reglamento Interno" : <p>{item.description}</p>,
+                          
+                        }[item.title]
+                      }
 
-                <div className='list'>                  
-                  <i className="fa fa-map-marker"></i>
-                    Carretera camino San Fabian L-31, hasta cruze sector la vega desvio cruce camino macal,  maitenal. desde aqui 2 kilómetros hasta maitenal, sector maitenal 5 km en subida hasta sector la leonera hasta el camping brillo de luna.
-                </div>
-                <div className='list'>
-                  <i className="fa fa-map-marker"></i>
-                    <a href='https://www.google.com/maps/dir//Camping+Brillo+de+Luna+Maitenal,+San+Fabi%C3%A1n,+Regi%C3%B3n+del+B%C3%ADo+B%C3%ADo/@-36.5076127,-71.5235552,4430m/data=!3m1!1e3!4m16!1m6!3m5!1s0x966f1fd0de3e9f17:0xaa2f4398539a1695!2sCamping+Brillo+de+Luna+Maitenal!8m2!3d-36.505861!4d-71.530278!4m8!1m0!1m5!1m1!1s0x966f1fd0de3e9f17:0xaa2f4398539a1695!2m2!1d-71.530278!2d-36.505861!3e2?hl=es' target="_blank">
-                      Mapa de Comó llegar.
-                    </a>
-                </div>
-                
-                <div className='list'>
-                  <i className="fa fa-envelope-o"></i>
-                  <a href='mailto:campingbrillodeluna@gmail.com' target='_blank' rel='noopener noreferrer'>
-                    campingbrillodeluna@gmail.com
-                  </a>
-                </div>
-                <div className='list'>
-                  <i className="fa fa-phone"></i>
-                  <a href='tel:+569 92404001' target='_blank' rel='noopener noreferrer'>
-                    +569 92404001 "Juan guerrero"
-                  </a>
-                  <br/>
-                  <a href='tel:+569 89001713' target='_blank' rel='noopener noreferrer'>
-                    +569 89001713 "Carmen sanchez"
-                  </a>
-                  
-                  
+                      
+                      
 
-                </div>
+                    </div>                    
+                  ))
+                };                
               </div>
            </div>
           </div>          

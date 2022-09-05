@@ -47,17 +47,14 @@ export default () => (
       <ScrollTop path="/">
         <Home exact path="/">
           <Redirect to="/home" />
-        </Home>
-        
+        </Home>        
         <Home1 path="/home1" />
         <Home2 path="/home2" />
         <About path="/about" />
         <Team path="/team" />
         <Price path="/price" />
         <Atracciones path="/atracciones" />
-        <Malalcura path="/malalcura" />
-        <ElValiente path="elvaliente" />
-        <AltoDelPadre path="altodelpadre" />
+        <Malalcura path="/atraccion/:id" />        
         <Service1 path="/service1" />
         <Service2 path="/service2" />
         <Service3 path="/service3" />
@@ -70,7 +67,6 @@ export default () => (
       <a href="https://wa.me/56992404001" target="_blank">
         <img src="./img/whatsapp.png" />
       </a>
-    </div>
-    
+    </div>    
   </div>
 );

@@ -30,11 +30,15 @@ export default () => {
               <Modal onClose={closeLightbox}>
                 <Carousel
                   currentIndex={currentImage}
-                  views={Images.map(x => ({
-                    ...x,
-                    srcset: x.srcSet,
-                    caption: x.title
-                  }))}
+                  views={
+
+                    Images.map(x => ({
+                      ...x,
+                      srcset: x.srcSet,
+                      caption: x.title
+                    })
+                    
+                  )}
                 />
               </Modal>
             ) : null}

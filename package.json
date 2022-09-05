@@ -69,6 +69,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-player": "^2.9.0",
     "react-pose": "^4.0.10",
+    "react-router-dom": "5.2.0",
     "react-slick": "^0.27.8",
     "react-socks": "^2.1.0",
     "react-spring-lightbox": "^1.4.11",
