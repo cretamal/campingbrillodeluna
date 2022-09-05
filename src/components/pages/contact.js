@@ -62,6 +62,7 @@ export default () => {
           </div>
         </div>
       </section>
+      
       <section className='container-fluid box-contact'>
         <div className='row m-10-hor'>
           <div className='col-md-12'>
