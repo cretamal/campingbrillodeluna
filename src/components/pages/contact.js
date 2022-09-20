@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { Link } from '@reach/router';
 import Footer from '../components/footer';
 import axios from "axios";
+import ReactMarkdown from 'react-markdown'
 
 
 export default () => {
@@ -74,21 +75,9 @@ export default () => {
                     <div className='list'>                                        
                       <p className='title'>{item.title}</p>
                       <i className="fa fa-angle-double-right"></i>                     
-                        
-                      {
-                        {
-                          "Indicación" : <p>{item.description}</p>,
-                          "Mapa" : <a href={item.linkExterno} target="_blank">{item.description}</a>,
-                          "Correo" : <a href={`mailto:${item.linkExterno}`}>{item.linkExterno}</a>,
-                          "Telefono" : <a href={`tel:${item.linkExterno}`}>{item.linkExterno}</a>,
-                          "Reglamento Interno" : <p>{item.description}</p>,
-                          
-                        }[item.title]
-                      }
-
-                      
-                      
-
+                      <ReactMarkdown>
+                        {item.description}
+                      </ReactMarkdown>
                     </div>                    
                   ))
                 };                
